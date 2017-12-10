@@ -13,7 +13,7 @@ This plugin lets you do exactly that!
 
 With [vim-plug](https://github.com/junegunn/vim-plug):
 
-  Plug 'gabebw/vim-github-link-opener'
+    Plug 'gabebw/vim-github-link-opener'
 
 Then run `:PlugInstall`.
 
