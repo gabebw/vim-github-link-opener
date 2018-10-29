@@ -26,6 +26,6 @@ ABOUT                                               *github_link_opener-about*
 
 Get the latest version of |github_link_opener| on GitHub:
 
-https://github.com/gabebw/vim-github_link_opener
+https://github.com/gabebw/vim-github-link-opener
 
  vim:tw=78:ts=8:ft=help:norl:
