@@ -12,7 +12,10 @@ function! s:OpenGitHubLink()
   let chars = '[-a-z0-9\.]\+'
   let path = matchstr(word, chars . '/' . chars)
   let has_more_than_one_slash = word =~# '/.\+/'
-  if empty(path) || has_more_than_one_slash
+  if &ft ==# 'go' && has_more_than_one_slash
+    let url = matchstr(word, chars . '/' . chars . '/' . chars)
+    call s:OpenWithNetrw("https://" . url)
+  elseif empty(path) || has_more_than_one_slash
     " Default behavior of `gx`
     call s:OpenWithNetrw(expand("<cfile>"))
   else
