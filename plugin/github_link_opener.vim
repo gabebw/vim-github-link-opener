@@ -9,7 +9,7 @@ endfunction
 
 function! s:OpenGitHubLink()
   let word = expand('<cWORD>')
-  let chars = '[-a-z0-9\.]\+'
+  let chars = '[-a-zA-Z0-9\.]\+'
   let path = matchstr(word, chars . '/' . chars)
   let has_more_than_one_slash = word =~# '/.\+/'
   if &ft ==# 'go' && has_more_than_one_slash
