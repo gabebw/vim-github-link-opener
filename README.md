@@ -2,7 +2,9 @@
 
 Ever seen something like this?
 
-    gem "github/linguist"
+```ruby
+gem "github/linguist"
+```
 
 Or this?
 
@@ -10,10 +12,12 @@ Or this?
 
 Or what about this (in Go files):
 
-    import (
-      "github.com/spf13/cobra"
-      "github.com/stretchr/testify/assert"
-    )
+```golang
+import (
+  "github.com/spf13/cobra"
+  "github.com/stretchr/testify/assert"
+)
+```
 
 Wouldn't it be cool if you could quickly open
 <https://github.com/github/linguist>,
