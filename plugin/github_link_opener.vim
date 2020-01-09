@@ -16,7 +16,7 @@ function! s:OpenGitHubLink()
   if &ft ==# 'go' && has_more_than_one_slash
     let url = matchstr(word, chars . '/' . chars . '/' . chars)
     call s:OpenWithNetrw("https://" . url)
-  elseif &ft ==# 'javascript' && line_has_js_package || &ft ==# 'json'
+  elseif index(['javascript', 'javascript.jsx', 'typescript'], &ft) >= 0 && line_has_js_package
     execute "!npm repo " . expand("<cword>")
   elseif empty(path) || has_more_than_one_slash
     " Default behavior of `gx`

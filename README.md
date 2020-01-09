@@ -23,11 +23,6 @@ Or npm packages (uses `npm repo`):
 ```javascript
 const jwt = require('jsonwebtoken');
 import jwt from 'jsonwebtoken';
-
-// Package.json
-"dependencies": {
-  "jsonwebtoken": "^8.5.1"
-}
 ```
 
 Wouldn't it be cool if you could quickly open
