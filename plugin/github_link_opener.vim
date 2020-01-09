@@ -17,7 +17,10 @@ function! s:OpenGitHubLink()
     let url = matchstr(word, chars . '/' . chars . '/' . chars)
     call s:OpenWithNetrw("https://" . url)
   elseif index(['javascript', 'javascript.jsx', 'typescript'], &ft) >= 0 && line_has_js_package
-    execute "!npm repo " . expand("<cword>")
+    let package = matchstr(getline('.'), '\v[''"]\@?\zs(\w+[-.]?)+\ze')
+    if !empty(package)
+      execute '!npm repo ' . package
+    endif
   elseif empty(path) || has_more_than_one_slash
     " Default behavior of `gx`
     call s:OpenWithNetrw(expand("<cfile>"))
