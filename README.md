@@ -19,11 +19,23 @@ import (
 )
 ```
 
+Or npm packages (uses `npm repo`):
+```javascript
+const jwt = require('jsonwebtoken');
+import jwt from 'jsonwebtoken';
+
+// Package.json
+"dependencies": {
+  "jsonwebtoken": "^8.5.1"
+}
+```
+
 Wouldn't it be cool if you could quickly open
 <https://github.com/github/linguist>,
 <https://github.com/gabebw/dotfiles>,
 <https://github.com/spf13/cobra>,
-or <https://github.com/stretchr/testify>?
+<https://github.com/stretchr/testify>
+or <https://github.com/auth0/node-jsonwebtoken>?
 
 This plugin lets you do exactly that!
 
