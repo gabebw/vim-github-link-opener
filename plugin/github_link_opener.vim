@@ -17,7 +17,8 @@ function! s:OpenGitHubLink()
     let url = matchstr(word, chars . '/' . chars . '/' . chars)
     call s:OpenWithNetrw("https://" . url)
   elseif index(['javascript', 'javascript.jsx', 'typescript'], &ft) >= 0 && line_has_js_package
-    let package = matchstr(getline('.'), '\v[''"]\@?\zs(\w+[-.]?)+\ze')
+    let re_scoped_or_nonscoped_npm_package = '\v[''"]\zs((\@(\w+[-.]?)+\/(\w+[-.]?)+)|(\w+[-.]?)+)'
+    let package = matchstr(getline('.'), re_scoped_or_nonscoped_npm_package)
     if !empty(package)
       silent execute '!npm repo ' . package
     endif
