@@ -19,7 +19,7 @@ function! s:OpenGitHubLink()
   elseif index(['javascript', 'javascript.jsx', 'typescript'], &ft) >= 0 && line_has_js_package
     let package = matchstr(getline('.'), '\v[''"]\@?\zs(\w+[-.]?)+\ze')
     if !empty(package)
-      execute '!npm repo ' . package
+      silent execute '!npm repo ' . package
     endif
   elseif empty(path) || has_more_than_one_slash
     " Default behavior of `gx`
