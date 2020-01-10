@@ -20,7 +20,7 @@ function! s:OpenGitHubLink()
     let re_scoped_or_nonscoped_npm_package = '\v[''"]\zs((\@(\w+[-.]?)+\/(\w+[-.]?)+)|(\w+[-.]?)+)'
     let package = matchstr(getline('.'), re_scoped_or_nonscoped_npm_package)
     if !empty(package)
-      silent execute '!npm repo ' . package
+      silent execute '!npm repo ' . package | redraw!
     endif
   elseif empty(path) || has_more_than_one_slash
     " Default behavior of `gx`
