@@ -47,6 +47,7 @@ working too.
 
 With [vim-plug](https://github.com/junegunn/vim-plug):
 
+    Plug 'mattn/webapi-vim'
     Plug 'gabebw/vim-github-link-opener'
 
 Then run `:PlugInstall`.

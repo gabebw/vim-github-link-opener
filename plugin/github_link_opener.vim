@@ -1,11 +1,8 @@
-let s:PACKAGE_REGISTRIES = { 'ruby': 'rubygems' }
-
 function! s:OpenPackage(package)
-  let api_url = 'https://octolinker-api.now.sh/?' . s:PACKAGE_REGISTRIES[&ft] . '='
-  let request_url = api_url . a:package
+  let request_url = 'https://rubygems.org/api/v1/gems/' . a:package . '.json'
   let response = webapi#http#get(request_url)
   let content = webapi#json#decode(response.content)
-  let url = get(content.result[0], 'result', '')
+  let url = get(content, 'source_code_uri', '')
   if !empty(url)
     call s:OpenWithNetrw(url)
     return 1
