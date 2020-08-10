@@ -47,6 +47,6 @@ working too.
 
 With [vim-plug](https://github.com/junegunn/vim-plug):
 
-    Plug 'gabebw/vim-github-link-opener'
+    Plug 'gabebw/vim-github-link-opener', {'branch': 'main'}
 
 Then run `:PlugInstall`.
