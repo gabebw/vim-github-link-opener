@@ -1,3 +1,9 @@
+## No longer maintained
+
+> [!IMPORTANT]
+> This repo is no longer maintained.
+> I use and recommend [gx.nvim](https://github.com/chrishrb/gx.nvim).
+
 # vim-github-link-opener
 
 Ever seen something like this?
